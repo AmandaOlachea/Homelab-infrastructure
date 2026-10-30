@@ -1,3 +1,3 @@
 # Contributing
 
-Corrections and documentation suggestions are welcome. Do not submit secrets, private network details, or logs containing personal information.
+I'm using this repository to keep track of my homelab as I build it. If you have a suggestion or spot something I could improve, feel free to open an issue.
