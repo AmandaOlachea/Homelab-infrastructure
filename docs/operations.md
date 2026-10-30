@@ -1,10 +1,19 @@
-# Operations and troubleshooting
+# Notes from running the lab
 
-- **Container services:** Managed through ZimaOS and Docker.
-- **Remote access:** Tailscale private overlay network.
-- **DNS:** Raspberry Pi running Pi-hole.
-- **VPN:** Gluetun using WireGuard; kill-switch isolation testing remains open.
-- **Power:** APC UPS monitored using NUT; complete shutdown validation remains open.
-- **Media discovery:** Verify library scans and service logs when newly imported files are delayed.
+## Jellyfin
 
-Operational details are generalized to avoid disclosing internal infrastructure.
+I had a movie finish downloading and wondered why it wasn't showing up in Jellyfin. It turned out the library just needed a little time to refresh. A good reminder to check the simple things first.
+
+## VPN
+
+Gluetun and WireGuard are connected. I still want to test what happens to the download workload if the VPN goes down.
+
+## Pi-hole
+
+I set up Pi-hole on a Raspberry Pi and confirmed DNS filtering was working. I like keeping this separate from the main server.
+
+## UPS
+
+NUT can communicate with the APC UPS and report its status. I'm working on validating shutdown behavior so a power outage doesn't turn into a bigger problem.
+
+I'll keep adding troubleshooting notes as I run into things.
