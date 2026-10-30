@@ -1,14 +1,26 @@
-# Roadmap
+# What's next
 
-- [x] Deploy core container services
-- [x] Configure Tailscale
-- [x] Configure Pi-hole
-- [x] Establish Gluetun VPN connectivity
-- [x] Configure initial NUT monitoring
-- [ ] Verify VPN isolation and kill switch
-- [ ] Complete storage migration
-- [ ] Add Bazarr
-- [ ] Evaluate Tdarr
-- [ ] Verify automatic Jellyfin scans
+This is my running list of things I want to finish or try.
+
+## Already working
+- [x] ZimaOS and Docker
+- [x] Jellyfin
+- [x] Sonarr and Radarr
+- [x] Tailscale remote access
+- [x] Pi-hole DNS filtering
+- [x] Gluetun with WireGuard
+- [x] Initial NUT UPS monitoring
+
+## Still working on
+- [ ] Finish storage formatting and migration
+- [ ] Verify VPN isolation and kill-switch behavior
+- [ ] Add Bazarr for English subtitles
+- [ ] Try Tdarr for cleaning up audio and subtitle tracks
+- [ ] Check automatic Jellyfin library scans
 - [ ] Test UPS shutdown behavior
-- [ ] Implement and test backup restoration
+- [ ] Set up and test backups
+
+## Eventually
+- [ ] Expand storage
+- [ ] Build out a rack
+- [ ] Experiment with local AI models
