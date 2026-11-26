@@ -1,0 +1,12 @@
+plugins { id 'com.android.application' version '8.7.3' }
+android {
+    namespace 'dev.portpocket'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'dev.portpocket'
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+}
