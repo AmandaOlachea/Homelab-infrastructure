@@ -1,0 +1,4 @@
+{"time":"2026-05-10T08:31:10Z","service":"gateway","message":"upstream connection timed out waiting for catalog"}
+{"time":"2026-05-10T08:30:00Z","service":"scheduler","message":"nightly backup started"}
+{"time":"2026-05-10T08:31:03Z","service":"catalog-db","message":"write failed: no space left on device"}
+{"time":"2026-05-10T08:31:14Z","service":"checkout","message":"dependency unavailable retry scheduled"}
