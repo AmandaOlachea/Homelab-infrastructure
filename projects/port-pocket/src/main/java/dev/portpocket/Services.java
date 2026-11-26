@@ -33,7 +33,12 @@ public class Services extends Activity {
         ScrollView scroll = new ScrollView(this); page = column();
         int pad = Math.round(16 * getResources().getDisplayMetrics().density);
         page.setPadding(pad,pad,pad,pad); scroll.addView(page); setContentView(scroll);
-        text(page,"Tailnet services",30);
+        TextView heading = text(page,"Tailnet services",30);
+        android.graphics.drawable.Drawable plug = getDrawable(R.drawable.plug);
+        int iconSize = Math.round(56 * getResources().getDisplayMetrics().density);
+        plug.setBounds(0,0,iconSize,iconSize);
+        heading.setGravity(android.view.Gravity.CENTER_VERTICAL);
+        heading.setCompoundDrawablesRelative(plug,null,null,null);
         text(page,"Connect Tailscale, then add a device name or Tailscale IP and the TCP port your service uses.",16);
         host = new EditText(this); host.setSingleLine(); host.setHint("Device name or IP"); page.addView(host);
         port = new EditText(this); port.setSingleLine(); port.setInputType(2); port.setHint("TCP port"); page.addView(port);
