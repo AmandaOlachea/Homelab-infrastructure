@@ -1,0 +1,15 @@
+<resources>
+    <color name="ink">#11181D</color>
+    <style name="PocketTheme" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/ink</item>
+        <item name="android:statusBarColor">@color/ink</item>
+        <item name="android:navigationBarColor">@color/ink</item>
+        <item name="android:colorAccent">#8AE6C6</item>
+        <item name="android:colorButtonNormal">#263B3B</item>
+        <item name="android:buttonStyle">@style/PocketButton</item>
+    </style>
+    <style name="PocketButton" parent="android:style/Widget.Material.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">#D9F9EF</item>
+    </style>
+</resources>
