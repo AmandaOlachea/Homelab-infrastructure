@@ -1,0 +1,26 @@
+name: Publish Port Pocket 1.2
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/port-pocket-release-1-2.yml']
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: Port-Pocket-Android
+          run-id: 45731558579
+          github-token: ${{ github.token }}
+          path: package
+      - name: Publish verified build
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          cp package/*.apk Port-Pocket-1.2.apk
+          gh release create port-pocket-v1.2 Port-Pocket-1.2.apk --repo "$REPO" --target 182f55529e7de794efeb34112bdbb63c1aaf4e3d --title 'Port Pocket 1.2 for Android' --notes 'Download Port-Pocket-1.2.apk on Android 8 or later. This is the debug-signed build from the Port Pocket workflow.'
