@@ -34,7 +34,13 @@ public class Dashboard extends Activity {
         layout = new LinearLayout(this); layout.setOrientation(1);
         layout.setBackgroundColor(Color.rgb(17,24,29)); layout.setPadding(dp(18),dp(12),dp(18),0);
         setContentView(layout);
-        layout.addView(label("Port Pocket",32));
+        TextView heading = label("Port Pocket",32);
+        android.graphics.drawable.Drawable plug = getDrawable(R.drawable.plug);
+        int iconSize = Math.round(56 * getResources().getDisplayMetrics().density);
+        plug.setBounds(0,0,iconSize,iconSize);
+        heading.setGravity(android.view.Gravity.CENTER_VERTICAL);
+        heading.setCompoundDrawablesRelative(plug,null,null,null);
+        layout.addView(heading);
         Button tailnet = new Button(this); tailnet.setText("Tailnet services"); layout.addView(tailnet);
         tailnet.setOnClickListener(v -> startActivity(new android.content.Intent(this,Services.class)));
         layout.addView(label("This phone  /  IPv4 loopback · TCP",15));
