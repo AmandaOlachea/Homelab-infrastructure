@@ -35,6 +35,8 @@ public class Dashboard extends Activity {
         layout.setBackgroundColor(Color.rgb(17,24,29)); layout.setPadding(dp(18),dp(12),dp(18),0);
         setContentView(layout);
         layout.addView(label("Port Pocket",32));
+        Button tailnet = new Button(this); tailnet.setText("Tailnet services"); layout.addView(tailnet);
+        tailnet.setOnClickListener(v -> startActivity(new android.content.Intent(this,Services.class)));
         layout.addView(label("This phone  /  IPv4 loopback · TCP",15));
         summary = label("Checking ports…",16); summary.setTextColor(0xff84dfbb); layout.addView(summary);
         search = new EditText(this); search.setSingleLine(); search.setHint("Search or add port number");
